@@ -10,4 +10,4 @@ Open your commandline and type:
 ```pip install pyyaml```
 
 ## Code filling
-Open the [main file](main.py) and modify it according to the requirement at [course page](http://localhost:63342/courses/cuhk-csc-1004/project-topics/python_image_net.html). 
+Open the [main file](main.py) and modify it according to the requirement at [course page](https://guiliang.github.io/courses/cuhk-csc-1004/project-topics/python_image_net.html). 
