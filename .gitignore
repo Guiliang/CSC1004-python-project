@@ -1,2 +1,4 @@
 /data/MNIST/*
 *.pt
+.idea
+*.DS_Store
