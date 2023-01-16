@@ -119,6 +119,8 @@ def run(config):
     ])
     dataset1 = datasets.MNIST('./data', train=True, download=True, transform=transform)
     dataset2 = datasets.MNIST('./data', train=False, transform=transform)
+
+    """add random seed to the DataLoader, pls modify this function"""
     train_loader = torch.utils.data.DataLoader(dataset1, **train_kwargs)
     test_loader = torch.utils.data.DataLoader(dataset2, **test_kwargs)
 
@@ -135,11 +137,11 @@ def run(config):
     scheduler = StepLR(optimizer, step_size=1, gamma=config.gamma)
     for epoch in range(1, config.epochs + 1):
         train_acc, train_loss = train(config, model, device, train_loader, optimizer, epoch)
-        """record training info"""
+        """record training info, Fill your code"""
         test_acc, train_loss = test(model, device, test_loader)
-        """record testing info"""
+        """record testing info, Fill your code"""
         scheduler.step()
-        """update the records"""
+        """update the records, Fill your code"""
 
     """plotting training performance with the records"""
     plot(epoches, training_loss)
@@ -152,8 +154,23 @@ def run(config):
         torch.save(model.state_dict(), "mnist_cnn.pt")
 
 
+def plot_mean():
+    """
+    Read the recorded results.
+    Plot the mean results after three runs.
+    :return:
+    """
+    """fill your code"""
+
+
 if __name__ == '__main__':
     arg = read_args()
-    # load training settings
+
+    """toad training settings"""
     config = load_config(arg)
+
+    """train model and record results"""
     run(config)
+
+    """plot the mean results"""
+    plot_mean()

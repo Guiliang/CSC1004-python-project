@@ -1,2 +1,3 @@
 pytorch
 pyyaml
+matplotlib
