@@ -17,7 +17,7 @@ The project is about using Convolutional Neural Networks (CNN) to classify handw
 
 To achieve it, the code will do the following:
 - Load the training config.
-- Download the minist dataset.
+- Download the minist dataset (divided into training and testing sets).
 - Construct the neural network.
 - Update the network parameters with training dataset by minimizing the loss. (Training).
 - Test the neural network with the testing dataset. (Testing)
