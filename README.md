@@ -11,5 +11,17 @@ Open your commandline and type:
 ```pip install pyyaml```  
 ```pip install matplotlib```
 
+## Task description
+The project is about using Convolutional Neural Networks (CNN) to classify handwritten digits.
+![minist-img](./imgs/abc.webp "minist")
+
+To achieve it, the code will do the following:
+- Load the training config.
+- Download the minist dataset.
+- Construct the neural network.
+- Update the network parameters with training dataset by minimizing the loss. (Training).
+- Test the neural network with the testing dataset. (Testing)
+- Plot the results.
+
 ## Code filling
 Open the [main file](main.py) and modify it according to the requirement at [course page](https://guiliang.github.io/courses/cuhk-csc-1004/project-topics/python_image_net.html). 
