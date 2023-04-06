@@ -103,12 +103,11 @@ def run(config):
     else:
         device = torch.device("cpu")
 
-    train_kwargs = {'batch_size': config.batch_size}
-    test_kwargs = {'batch_size': config.test_batch_size}
+    train_kwargs = {'batch_size': config.batch_size, 'shuffle': True}
+    test_kwargs = {'batch_size': config.test_batch_size, 'shuffle': True}
     if use_cuda:
         cuda_kwargs = {'num_workers': 1,
-                       'pin_memory': True,
-                       'shuffle': True}
+                       'pin_memory': True,}
         train_kwargs.update(cuda_kwargs)
         test_kwargs.update(cuda_kwargs)
 
