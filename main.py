@@ -138,7 +138,7 @@ def run(config):
     for epoch in range(1, config.epochs + 1):
         train_acc, train_loss = train(config, model, device, train_loader, optimizer, epoch)
         """record training info, Fill your code"""
-        test_acc, train_loss = test(model, device, test_loader)
+        test_acc, test_loss = test(model, device, test_loader)
         """record testing info, Fill your code"""
         scheduler.step()
         """update the records, Fill your code"""
